@@ -8,8 +8,8 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>spring-jms-activemq-helloworld</name>
-  <description>Spring JMS - ActiveMQ Example</description>
-  <url>https://www.codenotfound.com/</url>
+  <description>Spring JMS - ActiveMQ Consumer Producer Example</description>
+  <url>https://www.codenotfound.com/2017/05/spring-jms-activemq-consumer-producer-example.html</url>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
