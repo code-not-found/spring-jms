@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.EnableJms;
 import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
-import org.springframework.jms.connection.CachingConnectionFactory;
 
 @Configuration
 @EnableJms
@@ -24,14 +23,9 @@ public class ReceiverConfig {
   }
 
   @Bean
-  public CachingConnectionFactory cachingConnectionFactory() {
-    return new CachingConnectionFactory(activeMQConnectionFactory());
-  }
-
-  @Bean
   public DefaultJmsListenerContainerFactory jmsListenerContainerFactory() {
     DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
-    factory.setConnectionFactory(cachingConnectionFactory());
+    factory.setConnectionFactory(activeMQConnectionFactory());
     factory.setConcurrency("3-10");
 
     return factory;

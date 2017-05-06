@@ -12,8 +12,8 @@ public class Sender {
   @Autowired
   private JmsTemplate jmsTemplate;
 
-  public void send(String queue, String message) {
-    LOGGER.info("sending message='{}' to queue='{}'", message, queue);
-    jmsTemplate.convertAndSend(queue, message);
+  public void send(String destination, String message) {
+    LOGGER.info("sending message='{}' to destination='{}'", message, destination);
+    jmsTemplate.convertAndSend(destination, message);
   }
 }
