@@ -18,7 +18,7 @@ public class Receiver {
     return latch;
   }
 
-  @JmsListener(destination = "${queue.boot}")
+  @JmsListener(destination = "${destination.boot}")
   public void receive(String message) {
     LOGGER.info("received message='{}'", message);
     latch.countDown();
