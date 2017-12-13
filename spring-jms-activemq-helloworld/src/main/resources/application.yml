@@ -1,9 +1,5 @@
 activemq:
-  broker-url: vm://embedded-broker?create=false
+  broker-url: tcp://localhost:61616
 
 queue:
   helloworld: helloworld.q
-
-spring:
-  activemq:
-    in-memory: false
