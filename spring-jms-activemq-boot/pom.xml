@@ -9,12 +9,12 @@
 
   <name>spring-jms-activemq-boot</name>
   <description>Spring JMS - Spring Boot ActiveMQ Example</description>
-  <url>https://www.codenotfound.com/2017/05/spring-jms-activemq-boot-example.html</url>
+  <url>https://www.codenotfound.com/spring-jms-activemq-boot-example.html</url>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.3.RELEASE</version>
+    <version>1.5.9.RELEASE</version>
   </parent>
 
   <properties>
