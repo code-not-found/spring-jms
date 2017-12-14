@@ -8,8 +8,8 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>spring-jms-activemq-boot</name>
-  <description>Spring JMS - Spring Boot ActiveMQ Example</description>
-  <url>https://www.codenotfound.com/spring-jms-activemq-boot-example.html</url>
+  <description>Spring JMS - Browse Queue Example</description>
+  <url>https://www.codenotfound.com/spring-jms-boot-configuration-example.html</url>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
