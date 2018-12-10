@@ -1,5 +1,2 @@
 activemq:
   broker-url: vm://embedded-broker?create=false
-
-queue:
-  helloworld: helloworld.q

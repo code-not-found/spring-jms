@@ -1,4 +1,4 @@
-package com.codenotfound.jms;
+package com.codenotfound;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

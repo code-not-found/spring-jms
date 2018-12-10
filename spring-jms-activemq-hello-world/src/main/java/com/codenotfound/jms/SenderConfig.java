@@ -1,4 +1,4 @@
-package com.codenotfound.jms.producer;
+package com.codenotfound.jms;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,8 +14,9 @@ public class SenderConfig {
   private String brokerUrl;
 
   @Bean
-  public ActiveMQConnectionFactory activeMQConnectionFactory() {
-    ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
+  public ActiveMQConnectionFactory senderActiveMQConnectionFactory() {
+    ActiveMQConnectionFactory activeMQConnectionFactory =
+        new ActiveMQConnectionFactory();
     activeMQConnectionFactory.setBrokerURL(brokerUrl);
 
     return activeMQConnectionFactory;
@@ -23,7 +24,8 @@ public class SenderConfig {
 
   @Bean
   public CachingConnectionFactory cachingConnectionFactory() {
-    return new CachingConnectionFactory(activeMQConnectionFactory());
+    return new CachingConnectionFactory(
+        senderActiveMQConnectionFactory());
   }
 
   @Bean

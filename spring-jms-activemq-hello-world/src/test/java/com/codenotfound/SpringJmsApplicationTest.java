@@ -1,9 +1,7 @@
-package com.codenotfound.jms;
+package com.codenotfound;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 import java.util.concurrent.TimeUnit;
-
 import org.apache.activemq.junit.EmbeddedActiveMQBroker;
 import org.junit.ClassRule;
 import org.junit.Test;
@@ -12,9 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import com.codenotfound.jms.consumer.Receiver;
-import com.codenotfound.jms.producer.Sender;
+import com.codenotfound.jms.Receiver;
+import com.codenotfound.jms.Sender;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -22,7 +19,8 @@ import com.codenotfound.jms.producer.Sender;
 public class SpringJmsApplicationTest {
 
   @ClassRule
-  public static EmbeddedActiveMQBroker broker = new EmbeddedActiveMQBroker();
+  public static EmbeddedActiveMQBroker broker =
+      new EmbeddedActiveMQBroker();
 
   @Autowired
   private Sender sender;
@@ -32,7 +30,7 @@ public class SpringJmsApplicationTest {
 
   @Test
   public void testReceive() throws Exception {
-    sender.send("helloworld.q", "Hello Spring JMS ActiveMQ!");
+    sender.send("Hello Spring JMS ActiveMQ!");
 
     receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
     assertThat(receiver.getLatch().getCount()).isEqualTo(0);

@@ -1,4 +1,4 @@
-package com.codenotfound.jms.consumer;
+package com.codenotfound.jms;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,8 +15,9 @@ public class ReceiverConfig {
   private String brokerUrl;
 
   @Bean
-  public ActiveMQConnectionFactory activeMQConnectionFactory() {
-    ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory();
+  public ActiveMQConnectionFactory receiverActiveMQConnectionFactory() {
+    ActiveMQConnectionFactory activeMQConnectionFactory =
+        new ActiveMQConnectionFactory();
     activeMQConnectionFactory.setBrokerURL(brokerUrl);
 
     return activeMQConnectionFactory;
@@ -24,8 +25,10 @@ public class ReceiverConfig {
 
   @Bean
   public DefaultJmsListenerContainerFactory jmsListenerContainerFactory() {
-    DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
-    factory.setConnectionFactory(activeMQConnectionFactory());
+    DefaultJmsListenerContainerFactory factory =
+        new DefaultJmsListenerContainerFactory();
+    factory
+        .setConnectionFactory(receiverActiveMQConnectionFactory());
     factory.setConcurrency("3-10");
 
     return factory;
