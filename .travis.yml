@@ -13,7 +13,7 @@ addons:
 
 env:
 - PROJECT_DIR=spring-jms-activemq-boot
-- PROJECT_DIR=spring-jms-activemq-helloworld
+- PROJECT_DIR=spring-jms-activemq-hello-world
 
 script:
 - cd $PROJECT_DIR
