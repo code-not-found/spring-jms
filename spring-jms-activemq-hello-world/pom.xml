@@ -4,17 +4,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.codenotfound</groupId>
-  <artifactId>spring-jms-activemq-helloworld</artifactId>
+  <artifactId>spring-jms-activemq-hello-world</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>spring-jms-activemq-helloworld</name>
-  <description>Spring JMS - ActiveMQ Example</description>
-  <url>https://www.codenotfound.com/spring-jms-activemq-example.html</url>
+  <name>spring-jms-activemq-hello-world</name>
+  <description>Spring JMS ActiveMQ Example</description>
+  <url>https://codenotfound.com/spring-jms-activemq-example.html</url>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.9.RELEASE</version>
+    <version>2.1.1.RELEASE</version>
+    <relativePath /><!-- lookup parent from repository -->
   </parent>
 
   <properties>
@@ -23,7 +24,6 @@
   </properties>
 
   <dependencies>
-    <!-- spring-boot -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-activemq</artifactId>
@@ -33,7 +33,6 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
-    <!-- activemq -->
     <dependency>
       <groupId>org.apache.activemq.tooling</groupId>
       <artifactId>activemq-junit</artifactId>
@@ -44,7 +43,6 @@
 
   <build>
     <plugins>
-      <!-- spring-boot-maven-plugin -->
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
