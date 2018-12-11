@@ -3,4 +3,4 @@ spring:
     broker-url: tcp://localhost:61616
 
 queue:
-  boot: convertor.q
+  boot: converter.q

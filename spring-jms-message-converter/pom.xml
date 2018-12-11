@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.codenotfound</groupId>
-  <artifactId>spring-jms-message-convertor</artifactId>
+  <artifactId>spring-jms-message-converter</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>spring-jms-message-convertor</name>
-  <description>Spring JMS Message Convertor Example</description>
-  <url>https://codenotfound.com/spring-jms-message-convertor-example.html</url>
+  <name>spring-jms-message-converter</name>
+  <description>Spring JMS Message Converter Example</description>
+  <url>https://codenotfound.com/spring-jms-message-converter-example.html</url>
 
   <parent>
     <groupId>org.springframework.boot</groupId>

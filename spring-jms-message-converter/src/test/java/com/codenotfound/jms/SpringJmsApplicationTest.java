@@ -23,7 +23,7 @@ public class SpringJmsApplicationTest {
   @Test
   public void testReceive() throws Exception {
     Person person = new Person("John Doe", 20);
-    sender.send("convertor.q", person);
+    sender.send("converter.q", person);
 
     receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
     assertThat(receiver.getLatch().getCount()).isEqualTo(0);
