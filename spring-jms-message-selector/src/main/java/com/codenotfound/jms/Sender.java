@@ -21,15 +21,19 @@ public class Sender {
         message, isHighPriority);
 
     if (isHighPriority) {
-      jmsTemplate.convertAndSend(destination, message, m -> {
-        m.setStringProperty("priority", "high");
-        return m;
-      });
+      jmsTemplate.convertAndSend(destination, message,
+          messagePostProcessor -> {
+            messagePostProcessor.setStringProperty("priority",
+                "high");
+            return messagePostProcessor;
+          });
     } else {
-      jmsTemplate.convertAndSend(destination, message, m -> {
-        m.setStringProperty("priority", "low");
-        return m;
-      });
+      jmsTemplate.convertAndSend(destination, message,
+          messagePostProcessor -> {
+            messagePostProcessor.setStringProperty("priority",
+                "low");
+            return messagePostProcessor;
+          });
     }
   }
 }
