@@ -29,6 +29,5 @@ public class Receiver {
       selector = "priority = 'low'")
   public void receiveLow(String message) {
     LOGGER.info("received low priority message='{}'", message);
-    latch.countDown();
   }
 }
