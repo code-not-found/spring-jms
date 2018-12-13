@@ -1,0 +1,6 @@
+activemq:
+  broker-url: tcp://localhost:61616
+
+destination:
+  order: order.q
+  status: status.q
