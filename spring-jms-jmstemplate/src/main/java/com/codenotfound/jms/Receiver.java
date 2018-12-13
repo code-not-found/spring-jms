@@ -1,6 +1,7 @@
 package com.codenotfound.jms;
 
 import javax.jms.Destination;
+import javax.jms.TextMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +31,12 @@ public class Receiver {
 
     LOGGER.info("sending Status='Accepted' with CorrelationId='{}'",
         messageId);
-    jmsTemplate.convertAndSend(statusDestination, "Accepted",
-        messagePostProcessor -> {
-          messagePostProcessor.setJMSCorrelationID(messageId);
-          return messagePostProcessor;
-        });
+
+    jmsTemplate.send(statusDestination, messageCreator -> {
+      TextMessage message =
+          messageCreator.createTextMessage("Accepted");
+      message.setJMSCorrelationID(messageId);
+      return message;
+    });
   }
 }
