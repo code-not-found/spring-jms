@@ -51,8 +51,8 @@ public class SenderConfig {
 
   @Bean
   public JmsTemplate jmsTemplate() {
-    JmsTemplate jmsTemplate = new JmsTemplate();
-    jmsTemplate.setConnectionFactory(cachingConnectionFactory());
+    JmsTemplate jmsTemplate =
+        new JmsTemplate(cachingConnectionFactory());
     jmsTemplate.setDefaultDestination(orderDestination());
     jmsTemplate.setReceiveTimeout(5000);
 
