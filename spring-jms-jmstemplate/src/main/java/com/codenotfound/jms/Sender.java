@@ -24,6 +24,7 @@ public class Sender {
 
   public String sendOrder(String orderNumber) throws JMSException {
     final AtomicReference<Message> message = new AtomicReference<>();
+
     jmsTemplate.convertAndSend(orderNumber, messagePostProcessor -> {
       message.set(messagePostProcessor);
       return messagePostProcessor;
@@ -37,8 +38,9 @@ public class Sender {
   }
 
   public String receiveOrderStatus(String correlationId) {
-    String status = (String) jmsTemplate
-        .receiveSelectedAndConvert(statusDestination, "");
+    String status = (String) jmsTemplate.receiveSelectedAndConvert(
+        statusDestination,
+        "JMSCorrelationID = '" + correlationId + "'");
     LOGGER.info("receive Status='{}' for CorrelationId='{}'", status,
         correlationId);
 
