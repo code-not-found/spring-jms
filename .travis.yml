@@ -15,6 +15,7 @@ env:
 - PROJECT_DIR=spring-jms-activemq-boot
 - PROJECT_DIR=spring-jms-activemq-hello-world
 - PROJECT_DIR=spring-jms-jmstemplate
+- PROJECT_DIR=spring-jms-listener
 - PROJECT_DIR=spring-jms-message-converter
 - PROJECT_DIR=spring-jms-message-selector
 
