@@ -1,0 +1,7 @@
+activemq:
+  broker-url: vm://embedded-broker?create=false
+
+destination:
+  order: order.q
+  status1: status1.q
+  status2: status2.q
