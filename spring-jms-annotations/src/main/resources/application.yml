@@ -2,5 +2,5 @@ spring:
   activemq:
     broker-url: tcp://localhost:61616
 
-queue:
+destination:
   boot: boot.q

@@ -4,12 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.codenotfound</groupId>
-  <artifactId>spring-jms-activemq-boot</artifactId>
+  <artifactId>spring-jms-annotations</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>spring-jms-activemq-boot</name>
-  <description>Spring JMS Boot Configuration Example</description>
-  <url>https://codenotfound.com/spring-jms-boot-configuration-example.html</url>
+  <name>spring-jms-annotations</name>
+  <description>Spring JMS Annotations Example</description>
+  <url>https://codenotfound.com/spring-jms-annotations-example.html</url>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
