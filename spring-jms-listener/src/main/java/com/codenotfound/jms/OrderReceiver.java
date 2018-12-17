@@ -25,7 +25,7 @@ public class OrderReceiver {
 
   @JmsListener(destination = "${destination.order}",
       containerFactory = "orderDefaultJmsListenerContainerFactory")
-  public void receive(String order) {
+  public void receiveOrder(String order) {
     LOGGER.info("received order='{}'", order);
     jmsTemplate.convertAndSend(status1Destination, "Accepted");
     jmsTemplate.convertAndSend(status2Destination, "Accepted");
