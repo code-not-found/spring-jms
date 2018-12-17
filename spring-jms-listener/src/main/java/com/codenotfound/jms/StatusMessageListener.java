@@ -27,7 +27,7 @@ public class StatusMessageListener implements MessageListener {
     if (message instanceof TextMessage) {
       try {
         String text = ((TextMessage) message).getText();
-        LOGGER.info("id='{}' received text='{}'", id, text);
+        LOGGER.info("id='{}' received status='{}'", id, text);
         latch.countDown();
       } catch (JMSException e) {
         LOGGER.error("unable to read message payload", e);
