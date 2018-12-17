@@ -8,8 +8,8 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <name>spring-jms-integration</name>
-  <description>Spring JMS Boot Configuration Example</description>
-  <url>https://codenotfound.com/spring-jms-boot-configuration-example.html</url>
+  <description>Spring JMS Integration Example</description>
+  <url>https://codenotfound.com/spring-jms-integration-example.html</url>
 
   <parent>
     <groupId>org.springframework.boot</groupId>
