@@ -1,5 +1,2 @@
-queue:
-  boot: boot.q
-
 destination:
   integration: integration.q
