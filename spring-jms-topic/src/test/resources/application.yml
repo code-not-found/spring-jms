@@ -1,0 +1,5 @@
+activemq:
+  broker-url: vm://embedded-broker?create=false
+
+destination:
+  topic: topic.t
