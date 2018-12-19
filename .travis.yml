@@ -20,6 +20,7 @@ env:
 - PROJECT_DIR=spring-jms-listener
 - PROJECT_DIR=spring-jms-message-converter
 - PROJECT_DIR=spring-jms-message-selector
+- PROJECT_DIR=spring-jms-topic
 
 script:
 - cd $PROJECT_DIR
