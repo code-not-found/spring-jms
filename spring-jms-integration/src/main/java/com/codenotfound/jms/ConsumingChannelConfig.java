@@ -22,7 +22,7 @@ public class ConsumingChannelConfig {
   }
 
   @Bean
-  public JmsMessageDrivenEndpoint pollableJmsChannel(
+  public JmsMessageDrivenEndpoint jmsMessageDrivenEndpoint(
       ConnectionFactory connectionFactory) {
     JmsMessageDrivenEndpoint endpoint = new JmsMessageDrivenEndpoint(
         simpleMessageListenerContainer(connectionFactory),

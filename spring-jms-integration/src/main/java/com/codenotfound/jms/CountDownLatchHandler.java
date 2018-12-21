@@ -5,7 +5,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageHandler;
-import org.springframework.messaging.MessagingException;
 
 public class CountDownLatchHandler implements MessageHandler {
 
@@ -19,8 +18,7 @@ public class CountDownLatchHandler implements MessageHandler {
   }
 
   @Override
-  public void handleMessage(Message<?> message)
-      throws MessagingException {
+  public void handleMessage(Message<?> message) {
     LOGGER.info("received message='{}'", message);
     latch.countDown();
   }
