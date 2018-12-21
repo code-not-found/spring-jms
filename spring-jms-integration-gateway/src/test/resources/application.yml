@@ -1,0 +1,8 @@
+destination:
+  order:
+   request: request.q
+   response: response.q
+
+logging:
+  level:
+    org.springframework.integration: DEBUG

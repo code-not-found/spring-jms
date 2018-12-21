@@ -1,0 +1,8 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+
+destination:
+  order:
+   request: request.q
+   response: response.q
