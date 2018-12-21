@@ -29,7 +29,6 @@ public class ReceiverConfig {
         new DefaultJmsListenerContainerFactory();
     factory
         .setConnectionFactory(receiverActiveMQConnectionFactory());
-    factory.setConcurrency("3-10");
 
     return factory;
   }
