@@ -32,12 +32,6 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.apache.activemq.tooling</groupId>
-      <artifactId>activemq-junit</artifactId>
-      <version>${activemq.version}</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
 
   <build>
