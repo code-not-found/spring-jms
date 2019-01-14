@@ -11,8 +11,7 @@ public class OrderService {
       LoggerFactory.getLogger(OrderService.class);
 
   public Message<?> order(Message<?> order) {
-    LOGGER.info("received order='{}'",
-        order.getHeaders().getReplyChannel());
+    LOGGER.info("received order='{}'", order);
 
     Message<?> status = MessageBuilder.withPayload("Accepted")
         .setHeader("jms_correlationId",
