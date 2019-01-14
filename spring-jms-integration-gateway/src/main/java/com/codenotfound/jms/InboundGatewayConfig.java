@@ -42,7 +42,6 @@ public class InboundGatewayConfig {
         simpleMessageListenerContainer(connectionFactory),
         channelPublishingJmsMessageListener());
     gateway.setRequestChannel(inboundOrderRequestChannel());
-    gateway.setReplyChannel(inboundOrderResponseChannel());
 
     return gateway;
   }
