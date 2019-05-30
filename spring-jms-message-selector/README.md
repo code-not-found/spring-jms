@@ -4,4 +4,4 @@
 
 A detailed step-by-step tutorial on how to implement a message selector using Spring JMS and Spring Boot.
 
-[https://codenotfound.com/spring-jms-boot-configuration-example.html](https://codenotfound.com/spring-jms-message-selector-example.html)
+[https://codenotfound.com/spring-jms-message-selector-example.html](https://codenotfound.com/spring-jms-message-selector-example.html)
