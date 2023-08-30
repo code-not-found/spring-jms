@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 public class StatusMessageListener implements MessageListener {
 
   private static final Logger LOGGER =
-      LoggerFactory.getLogger(Sender.class);
+      LoggerFactory.getLogger(StatusMessageListener.class);
 
   private String id;
 
